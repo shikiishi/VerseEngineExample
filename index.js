@@ -4,7 +4,7 @@ import { setupVerse } from "./setup-verse";
 
 function setupScene(ticks) {
   const renderer = new THREE.WebGLRenderer();
-  renderer.outputEncoding = THREE.sRGBEncoding;
+  renderer.outputColorSpace = THREE.SRGBColorSpace;　// renderer.outputEncoding = THREE.sRGBEncoding; ←この表記が古いようなので直した
   renderer.setSize(window.innerWidth, window.innerHeight);
   renderer.setPixelRatio(window.devicePixelRatio);
   document.body.appendChild(renderer.domElement);
